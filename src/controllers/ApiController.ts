@@ -25,12 +25,19 @@ router.get('/image/send/:value', async (req: Request, res: Response) => {
   res.json(value)
 })
 
+router.get('/image/send/:index/:value', async (req: Request, res: Response) => {
+  const index: number = +req.params.index
+  const value: number  = +req.params.value
+  res.json({index, value})
+})
+
+
 /*
  * get image data
  * TODO: get rid of update
  * */
 router.get('/image/current.png', async (req: Request, res: Response) => {
-  res.json(gives you a image')
+  res.json('gives you a image')
   })
 
 export const ApiController: Router = router
