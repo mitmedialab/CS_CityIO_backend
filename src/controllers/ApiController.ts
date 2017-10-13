@@ -28,7 +28,9 @@ router.get('/image/send/:value', async (req: Request, res: Response) => {
 router.get('/image/send/:index/:value', async (req: Request, res: Response) => {
   const index: number = +req.params.index
   const value: number  = +req.params.value
-  res.json({index, value})
+  const data = {index, value}
+  console.log(data)
+  res.json(data)
 })
 
 
